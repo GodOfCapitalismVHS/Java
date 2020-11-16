@@ -88,6 +88,18 @@ public class ProvaStringhe {
 		String f = s.substring(1,3); // in questo caso prende la stringa dal carattere 1 al carattere 3
 		System.out.println("La stringa c è: " + c);
 		System.out.println("La stringa f è: " + f);
+		
+		//Maiuscolo primo carattere
+		System.out.println("Maiuscole su diversi punti della stringa: " + s.substring(0,1).toUpperCase()+s.substring(1,s.length()/2-1)+s.substring(s.length()/2-1,s.length()/2+1).toUpperCase()+ s.substring(s.length()/2+1,s.length()-1)+s.substring(s.length()-1,s.length()) .toUpperCase()); // il metodo substring estrae la sotto stringa a seconda dei parametri (0,1) solo quei caratteri (1) da quel carattere in poi
+		
+		/*
+		//e io che cazzo ne so che fa
+		String v = "aeiouAEIOU";
+		int n = 0;
+		for(int i = 0; i<s.length(); i++) {
+			if(v.indexOf(s.charAt(i))!=-1)
+		}
+		*/
 	}
 }
 
