@@ -5,8 +5,8 @@ public class ProvaStringhe {
 		
 		String s,t; //definizione di una stringa
 		s = "pippo"; //dichiaro una stringa vuota
-		t = new String("pippo"); //dichiaro una stringa vuota
-		
+		t = new String("angelo lo sa ha solo legna"); //dichiaro una stringa vuota
+
 		//stampa e misura della stringa
 		System.out.println("STAMPA E MISURA DELLA STRINGA: ");
 		System.out.println("s: " + s + "\t t: " + t);
@@ -89,18 +89,47 @@ public class ProvaStringhe {
 		System.out.println("La stringa c è: " + c);
 		System.out.println("La stringa f è: " + f);
 		
-		//Maiuscolo primo carattere
+		//Maiuscolo diversi CaRaTtErI
 		System.out.println("Maiuscole su diversi punti della stringa: " + s.substring(0,1).toUpperCase()+s.substring(1,s.length()/2-1)+s.substring(s.length()/2-1,s.length()/2+1).toUpperCase()+ s.substring(s.length()/2+1,s.length()-1)+s.substring(s.length()-1,s.length()) .toUpperCase()); // il metodo substring estrae la sotto stringa a seconda dei parametri (0,1) solo quei caratteri (1) da quel carattere in poi
-		
-		/*
-		//e io che cazzo ne so che fa
-		String v = "aeiouAEIOU";
+		System.out.println("\n");
+
+
+		//Controllo vocali e consonanti
+		System.out.println("CONTROLLI SULLE STRINGHE: ");
+		String v = "+-;.:*' ";
+		String p = "aeiouAEIOU";
 		int n = 0;
-		for(int i = 0; i<s.length(); i++) {
-			if(v.indexOf(s.charAt(i))!=-1)
+		int k = 0;
+		for(int i = 0; i<t.length(); i++) {
+			if(p.indexOf(t.charAt(i))!=-1)
+				n++;
+			else if(p.indexOf(t.charAt(i))==-1)
+				k++;
 		}
-		*/
+		System.out.println("La Stringa " + "'" + t + "'" + " ha: " + n + " vocali"); 
+		System.out.println("La Stringa " + "'" + t + "'" + " ha: " + k + " consonanti"); 
+		// System.out.println("La Stringa " + "'" + t + "'" + " ha: " + n + " segni di punteggiatura"); //non funziona
+		
+		String z = "";
+		for (int i = 0; i<t.length(); i++) {
+			if(v.indexOf(t.charAt(i))==-1)
+				z = z + t.charAt(i);	
+			}
+		System.out.println("La Stringa è stata bonificata: " + z); 
+		
+		//capovolge la stringa
+		String x = "";
+		for (int i = 0; i<z.length(); i++)
+			x = z.charAt(i) + x;
+		System.out.println("x: " + x);
+		
+		//palindroma
+		if(z.equals(x))
+			System.out.println("La Stringa è palindroma");
+		else
+			System.out.println("La Stringa non è palindroma");
 	}
+
 }
 
 
